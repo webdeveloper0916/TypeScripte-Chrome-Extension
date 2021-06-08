@@ -1,0 +1,13 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: setup
+    image: node
+    commands:
+      - yarn
+      - yarn run setup
+  - name: build
+    image: node
+    commands:
+      - yarn run build
